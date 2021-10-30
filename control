@@ -8,5 +8,6 @@ Standards-Version: 4.5.0
 Package: recomi
 Architecture: all
 Pre-Depends: dpkg (>= 1.16.1), python3, ${misc:Pre-Depends}
-Depends: ${misc:Depends}
+Depends: ${misc:Depends}, ${python3:Depends}, python3-pkg-resources
+Recommends: git
 Description: Repository Collection Mirror
