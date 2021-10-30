@@ -1,0 +1,9 @@
+Source: recomi
+Maintainer: Non-Applicable
+Build-Depends: python3, dh-python
+
+Package: recomi
+Architecture: any
+Pre-Depends: dpkg (>= 1.16.1), python3, ${misc:Pre-Depends}
+Depends: ${misc:Depends}
+Description: Repository Collection Mirror
