@@ -4,6 +4,10 @@ version := $(shell head -1 changelog  | sed 's|.*(\(.*\)).*|\1|')
 build: recomi_$(version)_all.deb
 
 # Find at https://pypi.org/project/recomi/#files
+#recomi-%.tar.gz:
+#	pip download recomi==$(version)
+recomi-1.1.0.tar.gz:
+	wget https://files.pythonhosted.org/packages/b1/e8/528447f484ca1de37f140fc21f7b7558d7fdb665a44b08588c958bde2301/recomi-1.1.0.tar.gz
 recomi-1.0.5.tar.gz:
 	wget https://files.pythonhosted.org/packages/9c/35/fabb8b5e0f5870d25e4cb1b21429995560864e570e389c15c57dc6dd68a3/recomi-1.0.5.tar.gz
 recomi-1.0.4.tar.gz:
