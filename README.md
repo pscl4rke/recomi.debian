@@ -9,7 +9,8 @@ unpacking it, and then building it into a format that can
 be installed on Debian/Ubuntu/etc machines.
 
 It is driven by the `changelog` file.
-When a new version is release add a new section to the top of this file.
+When a new version is release use `make newer` to
+add a new section to the top of this file.
 Then run `make`.
 Bob's your uncle.
 Mostly. :)

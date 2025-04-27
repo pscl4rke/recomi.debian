@@ -3,6 +3,17 @@ version := $(shell head -1 changelog  | sed 's|.*(\(.*\)).*|\1|')
 
 build: recomi_$(version)_all.deb
 
+newer: export DEBFULLNAME := P. S. Clarke
+newer: export DEBEMAIL := debs@pscl4rke.net
+newer:
+	sensible-browser "https://pypi.org/project/recomi/#files"
+	read -p "What is the new X.Y.Z version: " newversion \
+	 && dch --changelog changelog --newversion $$newversion New upstream release.
+	dch --changelog changelog --release --no-force-save-on-release
+	@echo
+	@echo REMEMBER TO UPDATE Makefile WITH THE DOWNLOAD URL
+	@echo REMEMBER TO UPDATE verify.sha256 WITH THE FILE HASH
+
 # Find at https://pypi.org/project/recomi/#files
 #recomi-%.tar.gz:
 #	pip download recomi==$(version)
