@@ -17,6 +17,8 @@ newer:
 # Find at https://pypi.org/project/recomi/#files
 #recomi-%.tar.gz:
 #	pip download recomi==$(version)
+recomi-1.2.0.tar.gz:
+	wget https://files.pythonhosted.org/packages/19/c0/e9d033ccb1a1b42998e371b033bcfcc16d9b85c1a108a3afb58c205c660b/recomi-1.2.0.tar.gz
 recomi-1.1.0.tar.gz:
 	wget https://files.pythonhosted.org/packages/b1/e8/528447f484ca1de37f140fc21f7b7558d7fdb665a44b08588c958bde2301/recomi-1.1.0.tar.gz
 recomi-1.0.5.tar.gz:
